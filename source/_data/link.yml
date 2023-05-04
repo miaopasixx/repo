@@ -1,0 +1,154 @@
+#- class_name: 框架
+  #flink_style: flexcard 
+  #link_list:
+    #- name: Hexo
+     # link: https://hexo.io/zh-tw/
+     # avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
+     # descr: 快速、简单且强大的网站框架
+- class_name: 大佬们
+  class_desc: 一些大佬
+  flink_style: anzhiyu
+  link_list:
+    - name: Akilar
+      link: https://akilar.top
+      avatar: https://bu.dusays.com/2022/08/14/62f87864834ae.png
+      descr: 欢迎光临糖果屋
+
+    - name: 张洪Heo
+      link: https://blog.zhheo.com
+      avatar: https://img.zhheo.com/i/2022/08/19/62ff32fa28da1.png
+      descr: 分享设计与科技生活
+
+    - name: 安知鱼`Blog
+      link: https://anzhiy.cn
+      avatar: https://img02.anzhiy.cn/adminuploads/1/2022/09/15/63232b7d91d22.jpg
+      descr: 生活明朗，万物可爱
+
+    - name: Leonus
+      link: https://blog.leonus.cn
+      avatar: https://q1.qlogo.cn/g?b=qq&nk=553344777&s=5
+      descr: 进一寸有进一寸的欢喜。
+
+    - name: 轻笑Chuckle
+      link: https://www.chuckle.top
+      avatar: https://cdn1.tianli0.top/npm/chuckle-js-css/chuckle/head.webp
+      descr: 宁静致远,倾尘轻笑
+
+    - name: Ariasakaの小窝
+      link: https://yisous.xyz
+      avatar: https://bu.dusays.com/2022/10/22/6352dfd1f3fa3.png
+      descr: 人有悲欢离合 月有阴晴圆缺
+      
+- class_name: 推荐博客
+  flink_style: flexcard 
+  link_list:
+    - name: 安知鱼
+      link: https://anzhiy.cn/
+      avatar: https://img02.anzhiy.cn/adminuploads/1/2022/09/15/63232b7d91d22.jpg
+      descr: 生活明朗，万物可爱
+      siteshot: https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/anzhiy.cn.jpg
+
+    - name: Akilar
+      link: https://akilar.top
+      avatar: https://bu.dusays.com/2022/08/14/62f87864834ae.png
+      descr: 流水幽吟绕耳边，煦风馨语抚心弦，挥臂欲揽冰钩月，银星斟酌醉人涎。
+
+    - name: 张洪Heo
+      link: https://blog.zhheo.com
+      avatar: https://img.zhheo.com/i/2022/08/19/62ff32fa28da1.png
+      descr: UI设计、交互设计、产品设计经验心得、SwiftUI开发技巧，分享Apple产品使用技巧、互联网干货分享、学习笔记记录。你可以在这里面找到很多关于UI设计相关的工具教程、思维技巧。还可以找到一些开发的小技巧。
+
+    - name: 轻笑Chuckle
+      link: https://www.chuckle.top
+      avatar: https://cdn1.tianli0.top/npm/chuckle-js-css/chuckle/head.webp
+      descr: 日月忽其不淹兮，春与秋其代序，此地也会成为回忆之所。
+
+    - name: Ariasakaの小窝
+      link: https://yisous.xyz
+      avatar: https://bu.dusays.com/2022/10/22/6352dfd1f3fa3.png
+      descr: 你距离Ariasaka约有1181公里，遥望齐州九点烟，一泓海水杯中泻。
+
+    - name: Tianli
+      link: https://tianli-blog.club
+      avatar: https://img1.tianli0.top/logo.png
+      descr: Tianli's blog – 自知之明是最难得的知识。
+
+    - name: Fomalhaut??
+      link: https://www.fomal.cc
+      avatar: https://www.fomal.cc/assets/head.jpg
+      descr: 因为在中国的夜空里，南边的天空星星往往比北边的天空要少得多（暗示孤独与自立是人生的主旋律）。
+
+    - name: Vincent文朔
+      link: https://blog.vincent1230.top
+      avatar: //a.vincent1230.top/blogrol/avatar.jpg
+      descr: 太阳出来了 雾就会散的
+      siteshot: /img/404.jpg
+
+    - name: Hc's Blog
+      link: https://blog.ivil.top
+      avatar: https://blog.ivil.top/img/logo.png
+      descr: 点亮星火 眺望未来
+      siteshot: /img/404.jpg
+
+    - name: 小城故事
+      link: https://www.webxc.ml
+      avatar: https://npm.elemecdn.com/webxc/logo/logo.jpg
+      descr: XC's Blog 记录生活和学习文章 
+      siteshot: /img/404.jpg
+
+    - name: 花语阁
+      link: https://www.pigax.cn
+      avatar: http://q1.qlogo.cn/g?b=qq&nk=2033008907&s=640
+      descr: 花语倾城 江无月
+      siteshot: /img/404.jpg
+
+    - name: 虫不知喔
+      link: https://blog.ssycs.com
+      avatar: https://blog.ssycs.com/image/avatar.png
+      descr: 浮生恰似冰底水，日夜东流人不知
+      siteshot: /img/404.jpg
+
+    - name: Nuyoah
+      link: https://262259.xyz
+      avatar: https://q1.qlogo.cn/g?b=qq&nk=2152889763&s=100
+      descr: 咸鱼的日常生活
+      siteshot: /img/404.jpg
+
+    - name: 呆鱼
+      link: https://daiyu-233.top
+      avatar: https://daiyu-233.top/img/avatar.png
+      descr:  遥望齐州九点烟，一泓海水杯中泻。
+      siteshot: /img/404.jpg
+
+    - name: Mghy の Blog
+      link: https://lmghy.top
+      avatar: https://cdn.staticaly.com/gh/MGHYGitHub/image-hosting@master/image-hosting/36d6c6eb3a95cbd0bdc4a70b221c5a6.7l7dzzhg0k00.webp
+      descr:  渚の果て　何度でも　歌うから🍒|  ありふれたあの日々をただ思い返す||
+      siteshot: /img/404.jpg
+
+    - name: Rainx’s Blog
+      link: https://rainxblog.top
+      avatar: https://rainxblog.top/wp-content/uploads/2022/11/head.jpg
+      descr: 人生如逆旅，我亦是行人。
+      siteshot: /img/404.jpg
+      
+    - name: LyShark - 孤风洗剑
+      link: https://www.lyshark.com
+      avatar: https://www.lyshark.com/images/baidu_logo.png
+      descr: 道，可道，非常道；名，可名，非常名。—— 老子《道德经》
+      
+    - name: lmx0
+      link: https://www.lmx0.top/
+      avatar: https://s1.vika.cn/space/2023/01/08/ccf7921738f741dbbd0a261c4b8fce1c
+      descr: 学如逆水行舟，不进则退。
+      siteshot: /img/404.jpg
+
+- class_name: 小伙伴
+  class_desc: 那些人，那些事
+  flink_style: anzhiyu
+  link_list:
+    - name: 安知鱼
+      link: https://anzhiy.cn/
+      avatar: https://img02.anzhiy.cn/adminuploads/1/2022/09/15/63232b7d91d22.jpg
+      descr: 生活明朗，万物可爱
+

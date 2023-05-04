@@ -1,0 +1,100 @@
+- class_name: 关于页
+  subtitle: 生活明朗，万物可爱✨
+  avatarImg: https://cdn.staticaly.com/gh/miaopasixx/picx-images-hosting@master/cq-询问台.168sjup9d000.webp
+  name: 喵帕斯先生
+  description: 是一名 独立开发者、博主
+  aboutsiteTips:
+    tips: 追求
+    title1: 源于
+    title2: 热爱而去 感受
+    word:
+      - 学习
+      - 生活
+      - 游戏
+      - 体验
+  helloAbout: Hello there!
+  skillsTips:
+    tips: 技能
+    title: 开启创造力
+  careers:
+    tips: 生涯
+    title: 无限进步
+    item:
+      - 百尺竿头，更进一步
+    img: https://cdn.staticaly.com/gh/miaopasixx/picx-images-hosting@master/background-/人生历程.6afgh1xpnvo0.webp
+  statistic:
+    link: /archives
+    text: 文章隧道
+    cover: https://cdn.staticaly.com/gh/miaopasixx/picx-images-hosting@master/background-/632d634f8376d.32dtrl9ilb40.webp
+  map:
+    title: 我现在住在
+    StrengthenTitle: 中国，济南市
+    background: https://cdn.staticaly.com/gh/miaopasixx/picx-images-hosting@master/background-/济南.43gpbixp3ag0.webp
+    backgroundDark: https://cdn.staticaly.com/gh/miaopasixx/picx-images-hosting@master/background-/济南市-black.4nkifuqf6tm0.webp
+  selfInfo:
+    selfInfoTips1: 生于
+    selfInfoContentYear: 1993
+    selfInfoTips2: 山东城建
+    selfInfoContent2: 大地测量
+    selfInfoTips3: 现在职业
+    selfInfoContent3: 不动产登记
+  personalities:
+    author_name: 活动家
+    personality_type: ENFP-T
+    photo_url: https://cdn.staticaly.com/gh/miaopasixx/picx-images-hosting@master/background-/神秘人.j3733m83hv4.webp
+    personality_img: https://cdn.staticaly.com/gh/miaopasixx/picx-images-hosting@master/background-/活动家.webp
+  maxim:
+    maxim_tips: 座右铭
+    maxim_top: 生活明朗，
+    maxim_bottom: 万物可爱。
+  buff:
+    buff_tips: 特长
+    buff_top: 技巧纵横的 喵帕斯先生
+    buff_bottom: 二次元指数 MAX
+  game:
+    game_tips: 爱好游戏
+    game_title: 克鲁赛德战记
+    game_uid: "玩家号码：212530124028497"
+    game_bg: https://cdn.staticaly.com/gh/miaopasixx/picx-images-hosting@master/Crusaders-Quest/559c14b86aec07a4d7146117147c0b61ec1642dc25ace6-pXWpCY_fw1200.6lw4bu520l40.webp
+  comic:
+    comic_tips: 爱好番剧
+    comic_title: 追番
+    comic_list:
+      - name: 约定的梦幻岛
+        href: https://www.bilibili.com/bangumi/media/md5267750/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
+        cover: https://cdn.staticaly.com/gh/miaopasixx/picx-images-hosting@master/TJ-anime/63988658aa1b1.27yt40k3x3fo.webp
+      - name: 咒术回战
+        href: https://www.bilibili.com/bangumi/media/md28229899/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
+        cover: https://cdn.staticaly.com/gh/miaopasixx/picx-images-hosting@master/TJ-anime/6398864e572ed.2lm8qa11wn60.webp
+      - name: 紫罗兰永恒花园
+        href: https://www.bilibili.com/bangumi/media/md8892/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
+        cover: https://cdn.staticaly.com/gh/miaopasixx/picx-images-hosting@master/TJ-anime/639886315d658.3nmlheoiu440.webp
+      - name: 鬼灭之刃
+        href: https://www.bilibili.com/bangumi/media/md22718131/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
+        cover: https://cdn.staticaly.com/gh/miaopasixx/picx-images-hosting@master/TJ-anime/639886403d472.6p9q1ed25ig0.webp
+      - name: JOJO的奇妙冒险 黄金之风
+        href: https://www.bilibili.com/bangumi/media/md135652/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
+        cover: https://cdn.staticaly.com/gh/miaopasixx/picx-images-hosting@master/TJ-anime/6398862649585.sjvrgq7ov34.webp
+  like:
+    like_tips: 关注偏好
+    like_title: 数码科技
+    like_bg: https://cdn.staticaly.com/gh/miaopasixx/picx-images-hosting@master/background-/数码科技.15d6p925gmqo.webp
+    like_bottom: 手机、电脑软硬件
+  music:
+    music_tips: 音乐偏好
+    music_title: 民谣、华语流行[片段、翻唱]
+    music_bg: https://cdn.staticaly.com/gh/miaopasixx/picx-images-hosting@master/background-/音乐偏好.ondgwolyrj4.webp
+    music_link: /music
+  reward_list:
+    - name: 亲爱的老婆大人💕
+      amount: money
+      datatime: 2023-04-12
+      link: https://m.weibo.cn/u/5357154912 
+      #http://m.weibo.cn/5357154912?from=10D4095010&wm=9847_0002&sourceType=weixin&s_channel=4&s_srans=6190979904_
+    - name: none
+      amount: none
+      datatime: 2023-03-12
+
+    
+
+  extra: true

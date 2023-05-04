@@ -1,0 +1,35 @@
+- class_name: 开启创造力
+  creativity_list:
+    - name: Java
+      color: "#fff"
+      icon: https://cdn.staticaly.com/gh/miaopasixx/picx-images-hosting@master/skill/java.71465houbkk0.webp
+    - name: Photoshop
+      color: "#4082c3"
+      icon: https://cdn.staticaly.com/gh/miaopasixx/picx-images-hosting@master/skill/Photoshop.1vhimjxyu4zk.webp
+    - name: Node
+      color: "#333"
+      icon: https://cdn.staticaly.com/gh/miaopasixx/picx-images-hosting@master/skill/Node.21ptgnh0o05c.svg
+    - name: Webpack
+      color: "#2e3a41"
+      icon: https://cdn.staticaly.com/gh/miaopasixx/picx-images-hosting@master/skill/Webpack.6exbyu7suhc0.webp
+    - name: Pinia
+      color: "#fff"
+      icon: https://cdn.staticaly.com/gh/miaopasixx/picx-images-hosting@master/skill/Pinia.5bybh7vzmgc0.svg
+    - name: Python
+      color: "#fff"
+      icon: https://cdn.staticaly.com/gh/miaopasixx/picx-images-hosting@master/skill/Python.1se20rqgkqf4.webp
+    - name: Vite
+      color: "#937df7"
+      icon: https://cdn.staticaly.com/gh/miaopasixx/picx-images-hosting@master/skill/Vite.73gjypc7h880.svg
+    - name: Flutter
+      color: "#4499e4"
+      icon: https://cdn.staticaly.com/gh/miaopasixx/picx-images-hosting@master/skill/Flutter.32k86753jc20.webp
+    - name: Vue
+      color: "#b8f0ae"
+      icon: https://cdn.staticaly.com/gh/miaopasixx/picx-images-hosting@master/skill/Vue.ihxfhuxztu0.webp
+    - name: React
+      color: "#222"
+      icon: https://cdn.staticaly.com/gh/miaopasixx/picx-images-hosting@master/skill/React.1xfx38ljb2yo.svg
+    - name: CSS3
+      color: "#2c51db"
+      icon: https://cdn.staticaly.com/gh/miaopasixx/picx-images-hosting@master/skill/CSS3.3t8xumcosgk0.webp
