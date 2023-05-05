@@ -77,11 +77,6 @@ jobs:
       - name: 初始化git
         run:           
           git init
-          
-      - name: 提交信息
-        run:               
-          git config user.name "miaopasixx"
-          git config user.email "a13026588708@163.com"
       
       - name: 更新项目
         run:           
