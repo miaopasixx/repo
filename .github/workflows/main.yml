@@ -47,6 +47,7 @@ jobs:
             git config user.name "miaopasixx" && \
             git config user.email "a13026588708@163.com" && \
             git add . && \
+            git config --global init.defaultBranch mian
             git commit -m "Deploy by GitHub Actions" && \
             git push -f "git@github.com:miaopasixx/ceshi.git" master:master
 
