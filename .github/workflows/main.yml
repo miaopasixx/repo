@@ -86,13 +86,17 @@ jobs:
         run:                   
           git commit -m "Update"
           
-      - name: 推送
+      - name: 名称
         run:
           git config --global user.name "${{secrets.GIT_NAME}}"
           
-      - name: 推送
+      - name: 邮箱
         run:
           git config --global user.email "${{secrets.GIT_EMAIL}}"
+      
+      - name: 密码
+        run:
+          git config --global user.password "zhangzh218*"
           
       - name: 推送
         run:      
