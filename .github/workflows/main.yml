@@ -89,4 +89,7 @@ jobs:
       - name: 推送
         run:          
           git push --force --quiet "https://${{secrets.GH_TOKEN}}@${{secrets.GH_REF}}" master:master
+          
+      - name: 推送2
+        run:      
           git push --force --quiet "https://github.com/miaopasixx/blog.git" master:master
