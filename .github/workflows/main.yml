@@ -69,10 +69,11 @@ jobs:
       - name: 部署博客
         run: 
           hexo cl && hexo g
+          
+      - name: 推送
+        run:           
           cd public
           git init
-          git config user.name "${{secrets.GIT_NAME}}"
-          git config user.email "${{secrets.GIT_EMAIL}}"
           git add .
           git commit -m "Update"
           git push --force --quiet "https://${{secrets.GH_TOKEN}}@${{secrets.GH_REF}}" master:master
