@@ -95,5 +95,5 @@ jobs:
           git config --global user.email "${{secrets.GIT_EMAIL}}"
           
       - name: 推送
-        run:         
-          git push --force --quiet "https://github.com/miaopasixx/blog.git" master:master
+        run:      
+          git push --force --quiet "https://${{secrets.GH_TOKEN}}@${{secrets.GH_REF}}" master:master
