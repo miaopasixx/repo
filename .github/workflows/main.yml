@@ -35,7 +35,7 @@ jobs:
 
       - name: 部署博客
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_PRIVATE_KEY: ${{ secrets.GH_TOKEN }}
           GIT_NAME: ${{ secrets.GIT_NAME }} # 修改为您的用户名或昵称
           GIT_EMAIL: ${{ secrets.GIT_EMAIL }} # 修改为您的邮箱地址
           DEPLOY_BRANCH: gh-pages # 修改为您使用的分支名称
@@ -44,11 +44,11 @@ jobs:
           hexo generate
           cd ./public && \
             git init && \
-            git config user.name "${GIT_NAME}" && \
-            git config user.email "${GIT_EMAIL}" && \
+            git config user.name "miaopasixx" && \
+            git config user.email "a13026588708@163.com" && \
             git add . && \
             git commit -m "Deploy by GitHub Actions" && \
-            git push -f "git@github.com:${{ github.repository }}.git" HEAD:${DEPLOY_BRANCH}
+            git push -f "git@github.com:miaopasixx/ceshi.git" master:master
 
       - name: 清理 Node.js 缓存
         run: npm cache clean --force
