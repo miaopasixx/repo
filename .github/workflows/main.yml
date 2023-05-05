@@ -74,12 +74,24 @@ jobs:
         run:           
           cd ./public
           
-      - name: 推送
+      - name: 初始化git
         run:           
           git init
+          
+      - name: 提交信息
+        run:               
           git config user.name "${{secrets.GIT_NAME}}"
           git config user.email "${{secrets.GIT_EMAIL}}"
+      
+      - name: 更新项目
+        run:           
           git add .
+          
+      - name: 更新备注
+        run:                   
           git commit -m "Update"
+      
+      - name: 推送
+        run:          
           git push --force --quiet "https://${{secrets.GH_TOKEN}}@${{secrets.GH_REF}}" master:master
           git push --force --quiet "https://github.com/miaopasixx/blog.git" master:master
