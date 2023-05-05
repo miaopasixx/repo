@@ -70,9 +70,12 @@ jobs:
         run: 
           hexo cl && hexo g
           
-      - name: 推送
+      - name: 跳转到./public
         run:           
           cd ./public
+          
+      - name: 推送
+        run:           
           git init
           git config user.name "${{secrets.GIT_NAME}}"
           git config user.email "${{secrets.GIT_EMAIL}}"
