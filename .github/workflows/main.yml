@@ -16,11 +16,11 @@ jobs:
       - name: 开始运行
         uses: actions/checkout@v1
 
-      - name: 设置 Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+      - name: 设置 Node.js 16.x 版本
+        uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node-version }}
-          
+          node-version: '16.x'
+   
       - name: 配置 Git 环境
         env:
           ACTION_DEPLOY_KEY: ${{ secrets.ACTION_DEPLOY_KEY }}
@@ -65,7 +65,6 @@ jobs:
           npm install --save or@0.2.0
           npm install --save pjax@0.2.8
           npm install -g yarn@1.22.19
-          rm -rf node_modules && npm install --force
 
       - name: 部署博客
         run: 
@@ -77,4 +76,4 @@ jobs:
           git add .
           git commit -m "Update"
           git push --force --quiet "https://${{secrets.GH_TOKEN}}@${{secrets.GH_REF}}" master:master
-          git push --force --quiet "https://${{secrets.CD_TOKEN}}@${{secrets.CD_REF}}" master:master
+          git push --force --quiet "https://github.com/miaopasixx/ceshi.git" master:master
