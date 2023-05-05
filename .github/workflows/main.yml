@@ -51,8 +51,7 @@ jobs:
           GIT_EMAIL: ${{ secrets.GIT_EMAIL }} # 修改为您的邮箱地址
           DEPLOY_BRANCH: gh-pages # 修改为您使用的分支名称
         run: 
-          hexo clean && hexo g 
           rm -rf .deploy_git
-          hexo g && hexo douban && hexo deploy
+          hexo g -d
           rm ~/.ssh/id_rsa
 
