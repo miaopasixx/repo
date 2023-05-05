@@ -14,10 +14,10 @@ jobs:
 
     steps:
       - name: 开始运行
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
 
       - name: 设置 Node.js 16.x 版本
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v16.x
         with:
           node-version: '16.x'
    
