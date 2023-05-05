@@ -85,11 +85,7 @@ jobs:
       - name: 更新备注
         run:                   
           git commit -m "Update"
-      
-      - name: 推送
-        run:          
-          git push --force --quiet "https://${{secrets.GH_TOKEN}}@${{secrets.GH_REF}}" master:master
           
-      - name: 推送2
+      - name: 推送
         run:      
           git push --force --quiet "https://github.com/miaopasixx/blog.git" master:master
