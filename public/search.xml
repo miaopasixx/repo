@@ -1,25 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>2020祝各位新年快乐</title>
-    <url>/m/2518721c/</url>
-    <content><![CDATA[<p>🙇‍ 来访的第1️⃣8️⃣7️⃣2️⃣9️⃣位小伙伴，你好呀~ </p>
-<p>🍻 这是一个有问必答，畅所欲言的留言区</p>
-<p>🍪 博客美化、友链互换、学习交流…</p>
-<p>🍭 也欢迎你对本站提出一些建议</p>
-<p><img src="https://i.loli.net/2020/02/01/L6P3AzC7RwYToQt.jpg" alt="2020.jpg"></p>
-<p>ℹ 2019 年就快过去了，总觉得该写点什么纪念一下</p>
-<p>最后2020祝各位新年快乐！</p>
-]]></content>
-      <categories>
-        <category>心得体会</category>
-      </categories>
-      <tags>
-        <tag>2020</tag>
-        <tag>总结</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2019年结束了，总要留下点什么吧？</title>
     <url>/m/36dd8626/</url>
     <content><![CDATA[<h2 id="年度闷骚逗逼中的Loser"><a href="#年度闷骚逗逼中的Loser" class="headerlink" title="年度闷骚逗逼中的Loser"></a>年度闷骚逗逼中的Loser</h2><p>光阴如梭，已然工作了五个年头。这一晃而过的情节让我不知何以使然。<br>我的2019年过的很累，收获却是意想不到的。</p>
@@ -50,270 +31,27 @@
         <category>心得体会</category>
       </categories>
       <tags>
-        <tag>总结</tag>
         <tag>2019</tag>
+        <tag>总结</tag>
       </tags>
   </entry>
   <entry>
-    <title>Artplayer.js的应用</title>
-    <url>/m/29cbe460/</url>
-    <content><![CDATA[<h2 id="你的名字"><a href="#你的名字" class="headerlink" title="你的名字"></a>你的名字</h2><blockquote>
-<p>在远离大都会的小山村，住着巫女世家出身的高中女孩宫水三叶。不知从何时起，三叶在梦中就会变成一个住在东京的高中男孩。另一方面，住在东京的高中男孩立花泷则总在梦里来到陌生的小山村，以女孩子的身份过着全新的生活。许是受那颗神秘彗星的影响，立花和三叶在梦中交换了身份。</p>
-</blockquote>
-
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>ArtPlayer</title>
-        <meta charset="UTF-8" />
-        <style>
-            .artplayer-app {
-                width: "auto";
-                height: 410px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="artplayer-app"></div>
-        <script src="https://cdn.jsdelivr.net/npm/artplayer/dist/artplayer.js"></script>
-        <script>
-var art = new Artplayer({
-    container: '.artplayer-app',
-    url: 'https://artplayer.org/assets/sample/video.mp4',
-    title: 'Your Name',
-    poster: 'https://artplayer.org/assets/sample/poster.jpg',
-    volume: 0.5,
-    isLive: false,
-    muted: false,
-    autoplay: false,
-    pip: true,
-    autoSize: true,
-    autoMini: true,
-    screenshot: true,
-    setting: true,
-    loop: true,
-    flip: true,
-    playbackRate: true,
-    aspectRatio: true,
-    fullscreen: true,
-    fullscreenWeb: true,
-    subtitleOffset: true,
-    miniProgressBar: true,
-    mutex: true,
-    backdrop: true,
-    playsInline: true,
-    autoPlayback: true,
-    airplay: true,
-    theme: '#23ade5',
-    lang: navigator.language.toLowerCase(),
-    whitelist: ['*'],
-    moreVideoAttr: {
-        crossOrigin: 'anonymous',
-    },
-    settings: [
-        {
-            width: 200,
-            html: 'Subtitle',
-            tooltip: 'Bilingual',
-            icon: '<img width="22" heigth="22" src="https://artplayer.org/assets/sample/poster.jpg">',
-            selector: [
-                {
-                    html: 'Display',
-                    tooltip: 'Show',
-                    switch: true,
-                    onSwitch: function (item) {
-                        item.tooltip = item.switch ? 'Hide' : 'Show';
-                        art.subtitle.show = !item.switch;
-                        return !item.switch;
-                    },
-                },
-                {
-                    default: true,
-                    html: 'Bilingual',
-                    url: 'https://artplayer.org/assets/sample/subtitle.srt',
-                },
-                {
-                    html: 'Chinese',
-                    url: 'https://artplayer.org/assets/sample/subtitle.cn.srt',
-                },
-                {
-                    html: 'Japanese',
-                    url: 'https://artplayer.org/assets/sample/subtitle.jp.srt',
-                },
-            ],
-            onSelect: function (item) {
-                art.subtitle.switch(item.url, {
-                    name: item.html,
-                });
-                return item.html;
-            },
-        },
-        {
-            html: 'Switcher',
-            icon: '<img width="22" heigth="22" src="https://artplayer.org/assets/img/state.svg">',
-            tooltip: 'OFF',
-            switch: false,
-            onSwitch: function (item) {
-                item.tooltip = item.switch ? 'OFF' : 'ON';
-                console.info('You clicked on the custom switch', item.switch);
-                return !item.switch;
-            },
-        },
-        {
-            html: 'Slider',
-            icon: '<img width="22" heigth="22" src="https://artplayer.org/assets/img/state.svg">',
-            tooltip: '5x',
-            range: [5, 1, 10, 0.1],
-            onRange: function (item) {
-                return item.range + 'x';
-            },
-        },
-    ],
-    contextmenu: [
-        {
-            html: 'Custom menu',
-            click: function (contextmenu) {
-                console.info('You clicked on the custom menu');
-                contextmenu.show = false;
-            },
-        },
-    ],
-    layers: [
-        {
-            html: '<img width="100" src="https://artplayer.org/assets/sample/layer.png">',
-            click: function () {
-                window.open('https://www.bilibili.com/bangumi/play/ss12044?theme=movie&spm_id_from=333.337.0.0');  https://aimu.app
-                console.info('You clicked on the custom layer');
-            },
-            style: {
-                position: 'absolute',
-                top: '20px',
-                right: '20px',
-                opacity: '.9',
-            },
-        },
-    ],
-    quality: [
-        {
-            default: true,
-            html: 'SD 480P',
-            url: 'https://artplayer.org/assets/sample/video.mp4',
-        },
-        {
-            html: 'HD 720P',
-            url: 'https://artplayer.org/assets/sample/video.mp4',
-        },
-    ],
-    thumbnails: {
-        url: 'https://artplayer.org/assets/sample/thumbnails.png',
-        number: 60,
-        column: 10,
-    },
-    subtitle: {
-        url: 'https://artplayer.org/assets/sample/subtitle.srt',
-        type: 'srt',
-        style: {
-            color: '#fe9200',
-            fontSize: '20px',
-        },
-        encoding: 'utf-8',
-    },
-    highlight: [
-        {
-            time: 15,
-            text: 'One more chance',
-        },
-        {
-            time: 30,
-            text: '谁でもいいはずなのに',
-        },
-        {
-            time: 45,
-            text: '夏の想い出がまわる',
-        },
-        {
-            time: 60,
-            text: 'こんなとこにあるはずもないのに',
-        },
-        {
-            time: 75,
-            text: '终わり',
-        },
-    ],
-    controls: [
-        {
-            position: 'right',
-            html: 'Control',
-            index: 1,
-            tooltip: 'Control Tooltip',
-            style: {
-                marginRight: '20px',
-            },
-            click: function () {
-                console.info('You clicked on the custom control');
-            },
-        },
-    ],
-    icons: {
-        loading: '<img src="https://artplayer.org/assets/img/ploading.gif">',
-        state: '<img width="150" heigth="150" src="https://artplayer.org/assets/img/state.svg">',
-        indicator: '<img width="16" heigth="16" src="https://artplayer.org/assets/img/indicator.svg">',
-    },
-});
-
-        </script>
-    </body>
-</html>
-
-
-<h2 id="相关教程链接"><a href="#相关教程链接" class="headerlink" title="相关教程链接"></a>相关教程链接</h2><ul>
-<li><a href="https://www.fly63.com/nav/3888">Artplayer.js相关使用教程</a></li>
-</ul>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">	<span class="keyword">var</span> art = <span class="keyword">new</span> <span class="title class_">Artplayer</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">		<span class="attr">container</span>: <span class="string">&#x27;.artplayerBox&#x27;</span>, <span class="comment">//容器</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">url</span>: <span class="string">&#x27;./video/video.mp4&#x27;</span>, <span class="comment">//视频地址</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">title</span>: <span class="string">&#x27;this is title&#x27;</span>, <span class="comment">//标题</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">poster</span>: <span class="string">&#x27;./image/poster.png&#x27;</span>, <span class="comment">//封面</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">volume</span>: <span class="number">0.5</span>, <span class="comment">//音量大小</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">isLive</span>: <span class="literal">false</span>, <span class="comment">//是否直播</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">muted</span>: <span class="literal">false</span>, <span class="comment">//是否静音</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">autoplay</span>: <span class="literal">false</span>, <span class="comment">//是否自动播放</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">pip</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">		<span class="attr">autoSize</span>: <span class="literal">true</span>, <span class="comment">//是否自动播放大小</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">screenshot</span>: <span class="literal">true</span>, <span class="comment">//显示截屏按钮</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">setting</span>: <span class="literal">true</span>, <span class="comment">//显示设置按钮</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">loop</span>: <span class="literal">true</span>, <span class="comment">//是否循环播放</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">flip</span>: <span class="literal">true</span>, <span class="comment">//是否翻转</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">playbackRate</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">		<span class="attr">aspectRatio</span>: <span class="literal">true</span>, <span class="comment">//显示保持比率按钮</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">fullscreen</span>: <span class="literal">true</span>, <span class="comment">//显示全屏按钮</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">fullscreenWeb</span>: <span class="literal">true</span>, <span class="comment">//是否网页全按钮</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">subtitleOffset</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">		<span class="attr">miniProgressBar</span>: <span class="literal">true</span>, <span class="comment">//mini模式按钮</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">localVideo</span>: <span class="literal">true</span>, <span class="comment">//本地视频</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">localSubtitle</span>: <span class="literal">true</span>, <span class="comment">//本地字幕</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">networkMonitor</span>: <span class="literal">false</span>, <span class="comment">//网络监控</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">autoPip</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">		<span class="attr">mutex</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">		<span class="attr">backdrop</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">		<span class="attr">theme</span>: <span class="string">&#x27;#ffad00&#x27;</span>, <span class="comment">//主题色</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">lang</span>: navigator.<span class="property">language</span>.<span class="title function_">toLowerCase</span>(),</span></span><br><span class="line"><span class="language-javascript">		<span class="attr">moreVideoAttr</span>: &#123; <span class="comment">//跨域</span></span></span><br><span class="line"><span class="language-javascript">			<span class="attr">crossOrigin</span>: <span class="string">&#x27;anonymous&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">		&#125;,</span></span><br><span class="line"><span class="language-javascript">		<span class="attr">contextmenu</span>: [&#123; <span class="comment">//右键菜单</span></span></span><br><span class="line"><span class="language-javascript">			<span class="attr">html</span>: <span class="string">&#x27;Custom menu&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">			<span class="attr">click</span>: <span class="keyword">function</span>(<span class="params">contextmenu</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">				<span class="variable language_">console</span>.<span class="title function_">info</span>(<span class="string">&#x27;You clicked on the custom menu&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">				contextmenu.<span class="property">show</span> = <span class="literal">false</span>;</span></span><br><span class="line"><span class="language-javascript">			&#125;,</span></span><br><span class="line"><span class="language-javascript">		&#125;, ],</span></span><br><span class="line"><span class="language-javascript">		<span class="attr">layers</span>: [&#123; <span class="comment">//视频图层</span></span></span><br><span class="line"><span class="language-javascript">			<span class="attr">html</span>: <span class="string">`&lt;img style=&quot;width: 100px&quot; src=&quot;./image/icon.png&quot;&gt;`</span>,</span></span><br><span class="line"><span class="language-javascript">			<span class="attr">click</span>: <span class="keyword">function</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">				<span class="variable language_">console</span>.<span class="title function_">info</span>(<span class="string">&#x27;You clicked on the custom layer&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">			&#125;,</span></span><br><span class="line"><span class="language-javascript">			<span class="attr">style</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">				<span class="attr">position</span>: <span class="string">&#x27;absolute&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">				<span class="attr">top</span>: <span class="string">&#x27;20px&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">				<span class="attr">right</span>: <span class="string">&#x27;20px&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">				<span class="attr">opacity</span>: <span class="string">&#x27;.9&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">			&#125;,</span></span><br><span class="line"><span class="language-javascript">		&#125;, ],</span></span><br><span class="line"><span class="language-javascript">		<span class="attr">quality</span>: [&#123; <span class="comment">//视频码率</span></span></span><br><span class="line"><span class="language-javascript">				<span class="attr">default</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">				<span class="attr">name</span>: <span class="string">&#x27;SD 480P&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">				<span class="attr">url</span>: <span class="string">&#x27;./video/quality.mp4&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">			&#125;,</span></span><br><span class="line"><span class="language-javascript">			&#123;</span></span><br><span class="line"><span class="language-javascript">				<span class="attr">name</span>: <span class="string">&#x27;HD 720P&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">				<span class="attr">url</span>: <span class="string">&#x27;./video/quality_720.mp4&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">			&#125;,</span></span><br><span class="line"><span class="language-javascript">		],</span></span><br><span class="line"><span class="language-javascript">		<span class="attr">thumbnails</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">			<span class="attr">url</span>: <span class="string">&#x27;./image/thumbnails.png&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">			<span class="attr">number</span>: <span class="number">100</span>,</span></span><br><span class="line"><span class="language-javascript">			<span class="attr">width</span>: <span class="number">160</span>,</span></span><br><span class="line"><span class="language-javascript">			<span class="attr">height</span>: <span class="number">90</span>,</span></span><br><span class="line"><span class="language-javascript">			<span class="attr">column</span>: <span class="number">10</span>,</span></span><br><span class="line"><span class="language-javascript">		&#125;,</span></span><br><span class="line"><span class="language-javascript">		<span class="comment">//视频高亮字幕</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">highlight</span>: [&#123;</span></span><br><span class="line"><span class="language-javascript">				<span class="attr">time</span>: <span class="number">60</span>,</span></span><br><span class="line"><span class="language-javascript">				<span class="attr">text</span>: <span class="string">&#x27;One more chance&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">			&#125;,</span></span><br><span class="line"><span class="language-javascript">			&#123;</span></span><br><span class="line"><span class="language-javascript">				<span class="attr">time</span>: <span class="number">120</span>,</span></span><br><span class="line"><span class="language-javascript">				<span class="attr">text</span>: <span class="string">&#x27;good&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">			&#125;,</span></span><br><span class="line"><span class="language-javascript">		],</span></span><br><span class="line"><span class="language-javascript">		<span class="comment">//视频控制条</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">controls</span>: [&#123;</span></span><br><span class="line"><span class="language-javascript">			<span class="attr">position</span>: <span class="string">&#x27;right&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">			<span class="attr">html</span>: <span class="string">&#x27;Control&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">			<span class="attr">click</span>: <span class="keyword">function</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">				<span class="variable language_">console</span>.<span class="title function_">info</span>(<span class="string">&#x27;You clicked on the custom control&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">			&#125;,</span></span><br><span class="line"><span class="language-javascript">		&#125;, ],</span></span><br><span class="line"><span class="language-javascript">	&#125;);</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+    <title>2020祝各位新年快乐</title>
+    <url>/m/2518721c/</url>
+    <content><![CDATA[<p>🙇‍ 来访的第1️⃣8️⃣7️⃣2️⃣9️⃣位小伙伴，你好呀~ </p>
+<p>🍻 这是一个有问必答，畅所欲言的留言区</p>
+<p>🍪 博客美化、友链互换、学习交流…</p>
+<p>🍭 也欢迎你对本站提出一些建议</p>
+<p><img src="https://i.loli.net/2020/02/01/L6P3AzC7RwYToQt.jpg" alt="2020.jpg"></p>
+<p>ℹ 2019 年就快过去了，总觉得该写点什么纪念一下</p>
+<p>最后2020祝各位新年快乐！</p>
+]]></content>
       <categories>
-        <category>技术梳理</category>
+        <category>心得体会</category>
       </categories>
       <tags>
-        <tag>你的名字</tag>
-        <tag>B站</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>chatbot_code_friendly</title>
-    <url>/m/13a60432/</url>
-    <content><![CDATA[<html>
-<head>
-  <meta charset="UTF-8">
-  <title>自适应 iframe 示例</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      width: 90%;
-      height: 160vh;
-      margin: 0 auto;
-    }
-    @media screen and (max-width: 767px) {
-      body {
-        height: 100vh;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <iframe src="https://zhangjf-chatbot-code-friendly.hf.space"frameborder="0" width="100%" height="100%"></iframe>
-  </div>
-</body>
-</html>]]></content>
-      <categories>
-        <category>模型测试</category>
-      </categories>
-      <tags>
-        <tag>chatgpt</tag>
+        <tag>总结</tag>
+        <tag>2020</tag>
       </tags>
   </entry>
   <entry>
@@ -842,8 +580,8 @@ var art = new Artplayer({
       </tags>
   </entry>
   <entry>
-    <title>Giadio 多角色 chatgpt</title>
-    <url>/m/b6557c71/</url>
+    <title>chatbot_code_friendly</title>
+    <url>/m/13a60432/</url>
     <content><![CDATA[<html>
 <head>
   <meta charset="UTF-8">
@@ -856,7 +594,7 @@ var art = new Artplayer({
     }
     .container {
       width: 90%;
-      height: 80vh;
+      height: 160vh;
       margin: 0 auto;
     }
     @media screen and (max-width: 767px) {
@@ -868,13 +606,10 @@ var art = new Artplayer({
 </head>
 <body>
   <div class="container">
-    <iframe src="https://zetafil-chatbot.hf.space" frameborder="0" width="100%" height="100%"></iframe>
+    <iframe src="https://zhangjf-chatbot-code-friendly.hf.space"frameborder="0" width="100%" height="100%"></iframe>
   </div>
 </body>
-</html>
-
-
-]]></content>
+</html>]]></content>
       <categories>
         <category>模型测试</category>
       </categories>
@@ -883,62 +618,227 @@ var art = new Artplayer({
       </tags>
   </entry>
   <entry>
-    <title>五险一金</title>
-    <url>/m/248914b0/</url>
-    <content><![CDATA[<h2 id="五险一金"><a href="#五险一金" class="headerlink" title="五险一金"></a>五险一金</h2><p>养老保险、医疗保险、生育保险、工伤保险、失业保险和住房公积金</p>
-<p>社保是社保保险，不包括一金</p>
-<p>五险一金分为公司缴费和个人缴费，公司缴费进入统筹账户，个人缴费进入个人账户（社保卡/医保卡）。</p>
-<p>五险一金交多少取决于两个因素：缴费基数和缴费比率</p>
-<p>数额= 基数 * 比例</p>
-<p>缴费基数是你上个年度月均工资，但不能超过当地平均工资的三倍，也不会低于当地平均工资的 60%。<br>缴费比率全国各统筹地规定不同</p>
-<p>五险一金费用交下来，个人缴费占到你工资的 11%左右，公司缴费占到你工资的 25%左右。</p>
-<p>如果你不清楚你所在城市的具体缴费比率，</p>
-<p>也可以直接在百度上搜索“XX 市 20XX 年五险一金计算器”，输入你的工资就可以算了。</p>
-<p>公积金，公司交的部分直接进入你的账户，可以用来买房、租房、还房贷。</p>
-<p>总的来说：五险一金让我们能在大城市安家落户：</p>
-<h3 id="医保"><a href="#医保" class="headerlink" title="医保"></a>医保</h3><p>医保报销限定在“两定点，三目录”内——定点医院、定点药费和国家规定的医保可以报销的药品目录、诊疗项目目录、服务设施目录。</p>
-<p>门急诊报销少，住院报销多</p>
-<p>医院等级越低报销越多，反之报销越少；在职人员报销少，退休人员报销多</p>
-<p>上海在职人员走医保门急诊，刷完医保卡当年计入账户部分后，自掏 1500 元便可开始报销，几万块的门诊费用医保能报销 50%-65%。<br>如果是住院报销，先用医保卡刷掉 1500 元以后，在 53 万元以下的住院费用都可以报销 85%，超过 53 万元的附加基金再报销 80%。</p>
-<p>一般来说，医保今天交，次月就可以用统筹账户报销，半年或一年后可以用个人账户刷卡报销。</p>
-<p>在退休前男性交满 25-30 年，女性退休前交满 20-25 年，退休后可以免费享受。</p>
-<p>如果退休时缴费年限不够，可以一次性补缴剩余费用，然后才可以免费享受。</p>
-<p>异地医保各地的规定都不相同</p>
-<h3 id="养老保险"><a href="#养老保险" class="headerlink" title="养老保险"></a>养老保险</h3><p>公司交的钱进入基础账户，个人交的钱进入个人账户，退休后，两个账户都可以拿钱。<br>长缴多得，多缴多得</p>
-<p>最后实际拿到的养老金会在当时社会平均工资的 6 成左右</p>
-<p>至少缴满 15 年；<br>第二必须到退休年龄；<br>办理完退休证明。</p>
-<p>退休时还没有交满 15 年的必须补满 15 年才能领，</p>
-<p>如果我们只交 15 年养老金就不交的话，最后只能拿到社会平均工资的 15%，这是非常少的</p>
-<p>ref：<a href="https://zhuanlan.zhihu.com/p/109276901">https://zhuanlan.zhihu.com/p/109276901</a></p>
-<h3 id="生育保险"><a href="#生育保险" class="headerlink" title="生育保险"></a>生育保险</h3><p>生育保险的待遇有三项：产假、生育津贴、生育医疗费用报销。</p>
-<p>生育期间千万别断交，不然报不了。<br>只能先跟另一位把证领了才能报销。</p>
-<h3 id="工伤保险"><a href="#工伤保险" class="headerlink" title="工伤保险"></a>工伤保险</h3><p>医疗费、住院伙食补助费、交通费、食宿费、康复治疗费、辅助器具费，这些都报销；停工留薪、护理费、伤残待遇、工亡待遇，这些都给钱。</p>
-<p>医疗费：遭遇工伤或者职业病时治疗所必须的医疗费全部报销；<br>停工留薪：遭遇工伤或者职业病时不能工作期间的工资和福利由工伤基金按照正常上班的标准给付；<br>伤残待遇：遭遇工伤或者职业病造成不同程度的残疾，工伤基金按照不同伤残等级(1-10 级)给付伤残待遇；<br>工亡待遇：遭遇工伤或者职业病之后死亡了，工伤基金会赔给你的家人一笔钱，还有丧葬补贴等。</p>
-<p>工伤认定<br>工伤认定属于行政行为，不申请，不认定。</p>
-<p>如果企业不给我们认定，我们一定要自己或者叫近亲属或者找工会帮忙认定。</p>
-<p>并且，超过一年，不予认定。</p>
-<p>“996”加班，积劳成疾的码农等，每日空调、WiFi、零食相伴，就算累成狗累出心脏病也不算职业病。</p>
-<h3 id="失业保险"><a href="#失业保险" class="headerlink" title="失业保险"></a>失业保险</h3><p>失业是指被辞退，一定企业方解除合同，并不是我们主动辞职。</p>
-<p>一般而言，失业保险金只能拿到当地最低工资的一部分，缴纳时间越长，可领时间也越长。</p>
-<p>但只能领取 12-24 个月。具体能领多少个月，由当地省级政府规定。</p>
-<p>在上海，非本地户口也不能领取，</p>
-<p>如果失业了，只能把失业保险账户转到户籍地去按照户籍地的标准领。</p>
-<h3 id="公积金"><a href="#公积金" class="headerlink" title="公积金"></a>公积金</h3><p>公积金存贷利率都由国家统一规定，各地一样，普遍比商业贷款利率低。</p>
-<p>住房公积金能贷多久？</p>
-<p>最长不能超过 30 年，以夫妻双方年龄大的为准，男性贷款年龄加上房贷时间不能超过 65 岁，女性不能超过 60 岁。</p>
-<p>有四种计算额度的方法，取四种方法里面最低的结果作为我们可以拿到的贷款额度。</p>
-<p>第四：住房公积金该不该取出来？</p>
-<p>大家都知道，公积金可以取出来，</p>
-<p>但如果取出太多，可能账户余额的 15 倍会低于上海贷款最高限额。</p>
-<p>所以，如果王华要取出来公积金，也得保证余额的 15 倍至少高于当地最高限额 50 万。</p>
-<p>剩下的，能取就取出来吧。</p>
-<p>最高贷款限额算法;还款能力算法;可贷比例算法;账户存储额倍数算法</p>
-]]></content>
+    <title>Artplayer.js的应用</title>
+    <url>/m/29cbe460/</url>
+    <content><![CDATA[<h2 id="你的名字"><a href="#你的名字" class="headerlink" title="你的名字"></a>你的名字</h2><blockquote>
+<p>在远离大都会的小山村，住着巫女世家出身的高中女孩宫水三叶。不知从何时起，三叶在梦中就会变成一个住在东京的高中男孩。另一方面，住在东京的高中男孩立花泷则总在梦里来到陌生的小山村，以女孩子的身份过着全新的生活。许是受那颗神秘彗星的影响，立花和三叶在梦中交换了身份。</p>
+</blockquote>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ArtPlayer</title>
+        <meta charset="UTF-8" />
+        <style>
+            .artplayer-app {
+                width: "auto";
+                height: 410px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="artplayer-app"></div>
+        <script src="https://cdn.jsdelivr.net/npm/artplayer/dist/artplayer.js"></script>
+        <script>
+var art = new Artplayer({
+    container: '.artplayer-app',
+    url: 'https://artplayer.org/assets/sample/video.mp4',
+    title: 'Your Name',
+    poster: 'https://artplayer.org/assets/sample/poster.jpg',
+    volume: 0.5,
+    isLive: false,
+    muted: false,
+    autoplay: false,
+    pip: true,
+    autoSize: true,
+    autoMini: true,
+    screenshot: true,
+    setting: true,
+    loop: true,
+    flip: true,
+    playbackRate: true,
+    aspectRatio: true,
+    fullscreen: true,
+    fullscreenWeb: true,
+    subtitleOffset: true,
+    miniProgressBar: true,
+    mutex: true,
+    backdrop: true,
+    playsInline: true,
+    autoPlayback: true,
+    airplay: true,
+    theme: '#23ade5',
+    lang: navigator.language.toLowerCase(),
+    whitelist: ['*'],
+    moreVideoAttr: {
+        crossOrigin: 'anonymous',
+    },
+    settings: [
+        {
+            width: 200,
+            html: 'Subtitle',
+            tooltip: 'Bilingual',
+            icon: '<img width="22" heigth="22" src="https://artplayer.org/assets/sample/poster.jpg">',
+            selector: [
+                {
+                    html: 'Display',
+                    tooltip: 'Show',
+                    switch: true,
+                    onSwitch: function (item) {
+                        item.tooltip = item.switch ? 'Hide' : 'Show';
+                        art.subtitle.show = !item.switch;
+                        return !item.switch;
+                    },
+                },
+                {
+                    default: true,
+                    html: 'Bilingual',
+                    url: 'https://artplayer.org/assets/sample/subtitle.srt',
+                },
+                {
+                    html: 'Chinese',
+                    url: 'https://artplayer.org/assets/sample/subtitle.cn.srt',
+                },
+                {
+                    html: 'Japanese',
+                    url: 'https://artplayer.org/assets/sample/subtitle.jp.srt',
+                },
+            ],
+            onSelect: function (item) {
+                art.subtitle.switch(item.url, {
+                    name: item.html,
+                });
+                return item.html;
+            },
+        },
+        {
+            html: 'Switcher',
+            icon: '<img width="22" heigth="22" src="https://artplayer.org/assets/img/state.svg">',
+            tooltip: 'OFF',
+            switch: false,
+            onSwitch: function (item) {
+                item.tooltip = item.switch ? 'OFF' : 'ON';
+                console.info('You clicked on the custom switch', item.switch);
+                return !item.switch;
+            },
+        },
+        {
+            html: 'Slider',
+            icon: '<img width="22" heigth="22" src="https://artplayer.org/assets/img/state.svg">',
+            tooltip: '5x',
+            range: [5, 1, 10, 0.1],
+            onRange: function (item) {
+                return item.range + 'x';
+            },
+        },
+    ],
+    contextmenu: [
+        {
+            html: 'Custom menu',
+            click: function (contextmenu) {
+                console.info('You clicked on the custom menu');
+                contextmenu.show = false;
+            },
+        },
+    ],
+    layers: [
+        {
+            html: '<img width="100" src="https://artplayer.org/assets/sample/layer.png">',
+            click: function () {
+                window.open('https://www.bilibili.com/bangumi/play/ss12044?theme=movie&spm_id_from=333.337.0.0');  https://aimu.app
+                console.info('You clicked on the custom layer');
+            },
+            style: {
+                position: 'absolute',
+                top: '20px',
+                right: '20px',
+                opacity: '.9',
+            },
+        },
+    ],
+    quality: [
+        {
+            default: true,
+            html: 'SD 480P',
+            url: 'https://artplayer.org/assets/sample/video.mp4',
+        },
+        {
+            html: 'HD 720P',
+            url: 'https://artplayer.org/assets/sample/video.mp4',
+        },
+    ],
+    thumbnails: {
+        url: 'https://artplayer.org/assets/sample/thumbnails.png',
+        number: 60,
+        column: 10,
+    },
+    subtitle: {
+        url: 'https://artplayer.org/assets/sample/subtitle.srt',
+        type: 'srt',
+        style: {
+            color: '#fe9200',
+            fontSize: '20px',
+        },
+        encoding: 'utf-8',
+    },
+    highlight: [
+        {
+            time: 15,
+            text: 'One more chance',
+        },
+        {
+            time: 30,
+            text: '谁でもいいはずなのに',
+        },
+        {
+            time: 45,
+            text: '夏の想い出がまわる',
+        },
+        {
+            time: 60,
+            text: 'こんなとこにあるはずもないのに',
+        },
+        {
+            time: 75,
+            text: '终わり',
+        },
+    ],
+    controls: [
+        {
+            position: 'right',
+            html: 'Control',
+            index: 1,
+            tooltip: 'Control Tooltip',
+            style: {
+                marginRight: '20px',
+            },
+            click: function () {
+                console.info('You clicked on the custom control');
+            },
+        },
+    ],
+    icons: {
+        loading: '<img src="https://artplayer.org/assets/img/ploading.gif">',
+        state: '<img width="150" heigth="150" src="https://artplayer.org/assets/img/state.svg">',
+        indicator: '<img width="16" heigth="16" src="https://artplayer.org/assets/img/indicator.svg">',
+    },
+});
+
+        </script>
+    </body>
+</html>
+
+
+<h2 id="相关教程链接"><a href="#相关教程链接" class="headerlink" title="相关教程链接"></a>相关教程链接</h2><ul>
+<li><a href="https://www.fly63.com/nav/3888">Artplayer.js相关使用教程</a></li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">	<span class="keyword">var</span> art = <span class="keyword">new</span> <span class="title class_">Artplayer</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">		<span class="attr">container</span>: <span class="string">&#x27;.artplayerBox&#x27;</span>, <span class="comment">//容器</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">url</span>: <span class="string">&#x27;./video/video.mp4&#x27;</span>, <span class="comment">//视频地址</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">title</span>: <span class="string">&#x27;this is title&#x27;</span>, <span class="comment">//标题</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">poster</span>: <span class="string">&#x27;./image/poster.png&#x27;</span>, <span class="comment">//封面</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">volume</span>: <span class="number">0.5</span>, <span class="comment">//音量大小</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">isLive</span>: <span class="literal">false</span>, <span class="comment">//是否直播</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">muted</span>: <span class="literal">false</span>, <span class="comment">//是否静音</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">autoplay</span>: <span class="literal">false</span>, <span class="comment">//是否自动播放</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">pip</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">		<span class="attr">autoSize</span>: <span class="literal">true</span>, <span class="comment">//是否自动播放大小</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">screenshot</span>: <span class="literal">true</span>, <span class="comment">//显示截屏按钮</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">setting</span>: <span class="literal">true</span>, <span class="comment">//显示设置按钮</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">loop</span>: <span class="literal">true</span>, <span class="comment">//是否循环播放</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">flip</span>: <span class="literal">true</span>, <span class="comment">//是否翻转</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">playbackRate</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">		<span class="attr">aspectRatio</span>: <span class="literal">true</span>, <span class="comment">//显示保持比率按钮</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">fullscreen</span>: <span class="literal">true</span>, <span class="comment">//显示全屏按钮</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">fullscreenWeb</span>: <span class="literal">true</span>, <span class="comment">//是否网页全按钮</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">subtitleOffset</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">		<span class="attr">miniProgressBar</span>: <span class="literal">true</span>, <span class="comment">//mini模式按钮</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">localVideo</span>: <span class="literal">true</span>, <span class="comment">//本地视频</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">localSubtitle</span>: <span class="literal">true</span>, <span class="comment">//本地字幕</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">networkMonitor</span>: <span class="literal">false</span>, <span class="comment">//网络监控</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">autoPip</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">		<span class="attr">mutex</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">		<span class="attr">backdrop</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">		<span class="attr">theme</span>: <span class="string">&#x27;#ffad00&#x27;</span>, <span class="comment">//主题色</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">lang</span>: navigator.<span class="property">language</span>.<span class="title function_">toLowerCase</span>(),</span></span><br><span class="line"><span class="language-javascript">		<span class="attr">moreVideoAttr</span>: &#123; <span class="comment">//跨域</span></span></span><br><span class="line"><span class="language-javascript">			<span class="attr">crossOrigin</span>: <span class="string">&#x27;anonymous&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">		&#125;,</span></span><br><span class="line"><span class="language-javascript">		<span class="attr">contextmenu</span>: [&#123; <span class="comment">//右键菜单</span></span></span><br><span class="line"><span class="language-javascript">			<span class="attr">html</span>: <span class="string">&#x27;Custom menu&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">			<span class="attr">click</span>: <span class="keyword">function</span>(<span class="params">contextmenu</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">				<span class="variable language_">console</span>.<span class="title function_">info</span>(<span class="string">&#x27;You clicked on the custom menu&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">				contextmenu.<span class="property">show</span> = <span class="literal">false</span>;</span></span><br><span class="line"><span class="language-javascript">			&#125;,</span></span><br><span class="line"><span class="language-javascript">		&#125;, ],</span></span><br><span class="line"><span class="language-javascript">		<span class="attr">layers</span>: [&#123; <span class="comment">//视频图层</span></span></span><br><span class="line"><span class="language-javascript">			<span class="attr">html</span>: <span class="string">`&lt;img style=&quot;width: 100px&quot; src=&quot;./image/icon.png&quot;&gt;`</span>,</span></span><br><span class="line"><span class="language-javascript">			<span class="attr">click</span>: <span class="keyword">function</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">				<span class="variable language_">console</span>.<span class="title function_">info</span>(<span class="string">&#x27;You clicked on the custom layer&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">			&#125;,</span></span><br><span class="line"><span class="language-javascript">			<span class="attr">style</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">				<span class="attr">position</span>: <span class="string">&#x27;absolute&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">				<span class="attr">top</span>: <span class="string">&#x27;20px&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">				<span class="attr">right</span>: <span class="string">&#x27;20px&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">				<span class="attr">opacity</span>: <span class="string">&#x27;.9&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">			&#125;,</span></span><br><span class="line"><span class="language-javascript">		&#125;, ],</span></span><br><span class="line"><span class="language-javascript">		<span class="attr">quality</span>: [&#123; <span class="comment">//视频码率</span></span></span><br><span class="line"><span class="language-javascript">				<span class="attr">default</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">				<span class="attr">name</span>: <span class="string">&#x27;SD 480P&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">				<span class="attr">url</span>: <span class="string">&#x27;./video/quality.mp4&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">			&#125;,</span></span><br><span class="line"><span class="language-javascript">			&#123;</span></span><br><span class="line"><span class="language-javascript">				<span class="attr">name</span>: <span class="string">&#x27;HD 720P&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">				<span class="attr">url</span>: <span class="string">&#x27;./video/quality_720.mp4&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">			&#125;,</span></span><br><span class="line"><span class="language-javascript">		],</span></span><br><span class="line"><span class="language-javascript">		<span class="attr">thumbnails</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">			<span class="attr">url</span>: <span class="string">&#x27;./image/thumbnails.png&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">			<span class="attr">number</span>: <span class="number">100</span>,</span></span><br><span class="line"><span class="language-javascript">			<span class="attr">width</span>: <span class="number">160</span>,</span></span><br><span class="line"><span class="language-javascript">			<span class="attr">height</span>: <span class="number">90</span>,</span></span><br><span class="line"><span class="language-javascript">			<span class="attr">column</span>: <span class="number">10</span>,</span></span><br><span class="line"><span class="language-javascript">		&#125;,</span></span><br><span class="line"><span class="language-javascript">		<span class="comment">//视频高亮字幕</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">highlight</span>: [&#123;</span></span><br><span class="line"><span class="language-javascript">				<span class="attr">time</span>: <span class="number">60</span>,</span></span><br><span class="line"><span class="language-javascript">				<span class="attr">text</span>: <span class="string">&#x27;One more chance&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">			&#125;,</span></span><br><span class="line"><span class="language-javascript">			&#123;</span></span><br><span class="line"><span class="language-javascript">				<span class="attr">time</span>: <span class="number">120</span>,</span></span><br><span class="line"><span class="language-javascript">				<span class="attr">text</span>: <span class="string">&#x27;good&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">			&#125;,</span></span><br><span class="line"><span class="language-javascript">		],</span></span><br><span class="line"><span class="language-javascript">		<span class="comment">//视频控制条</span></span></span><br><span class="line"><span class="language-javascript">		<span class="attr">controls</span>: [&#123;</span></span><br><span class="line"><span class="language-javascript">			<span class="attr">position</span>: <span class="string">&#x27;right&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">			<span class="attr">html</span>: <span class="string">&#x27;Control&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">			<span class="attr">click</span>: <span class="keyword">function</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">				<span class="variable language_">console</span>.<span class="title function_">info</span>(<span class="string">&#x27;You clicked on the custom control&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">			&#125;,</span></span><br><span class="line"><span class="language-javascript">		&#125;, ],</span></span><br><span class="line"><span class="language-javascript">	&#125;);</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>心得体会</category>
+        <category>技术梳理</category>
       </categories>
       <tags>
-        <tag>五险一金</tag>
+        <tag>你的名字</tag>
+        <tag>B站</tag>
       </tags>
   </entry>
   <entry>
@@ -1015,21 +915,145 @@ var art = new Artplayer({
       </tags>
   </entry>
   <entry>
-    <title>如何引用B站视频</title>
-    <url>/m/39deb4c6/</url>
-    <content><![CDATA[<h2 id="【差不多】邓紫棋-视频播放源"><a href="#【差不多】邓紫棋-视频播放源" class="headerlink" title="【差不多】邓紫棋-视频播放源"></a>【差不多】邓紫棋-视频播放源</h2><iframe src="//player.bilibili.com/player.html?aid=60016166&cid=104514776&page=1&high_quality=1&danmaku=1" allowfullscreen="allowfullscreen" width="100%" height="400" scrolling="no" frameborder="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
+    <title>五险一金</title>
+    <url>/m/248914b0/</url>
+    <content><![CDATA[<h2 id="五险一金"><a href="#五险一金" class="headerlink" title="五险一金"></a>五险一金</h2><p>养老保险、医疗保险、生育保险、工伤保险、失业保险和住房公积金</p>
+<p>社保是社保保险，不包括一金</p>
+<p>五险一金分为公司缴费和个人缴费，公司缴费进入统筹账户，个人缴费进入个人账户（社保卡/医保卡）。</p>
+<p>五险一金交多少取决于两个因素：缴费基数和缴费比率</p>
+<p>数额= 基数 * 比例</p>
+<p>缴费基数是你上个年度月均工资，但不能超过当地平均工资的三倍，也不会低于当地平均工资的 60%。<br>缴费比率全国各统筹地规定不同</p>
+<p>五险一金费用交下来，个人缴费占到你工资的 11%左右，公司缴费占到你工资的 25%左右。</p>
+<p>如果你不清楚你所在城市的具体缴费比率，</p>
+<p>也可以直接在百度上搜索“XX 市 20XX 年五险一金计算器”，输入你的工资就可以算了。</p>
+<p>公积金，公司交的部分直接进入你的账户，可以用来买房、租房、还房贷。</p>
+<p>总的来说：五险一金让我们能在大城市安家落户：</p>
+<h3 id="医保"><a href="#医保" class="headerlink" title="医保"></a>医保</h3><p>医保报销限定在“两定点，三目录”内——定点医院、定点药费和国家规定的医保可以报销的药品目录、诊疗项目目录、服务设施目录。</p>
+<p>门急诊报销少，住院报销多</p>
+<p>医院等级越低报销越多，反之报销越少；在职人员报销少，退休人员报销多</p>
+<p>上海在职人员走医保门急诊，刷完医保卡当年计入账户部分后，自掏 1500 元便可开始报销，几万块的门诊费用医保能报销 50%-65%。<br>如果是住院报销，先用医保卡刷掉 1500 元以后，在 53 万元以下的住院费用都可以报销 85%，超过 53 万元的附加基金再报销 80%。</p>
+<p>一般来说，医保今天交，次月就可以用统筹账户报销，半年或一年后可以用个人账户刷卡报销。</p>
+<p>在退休前男性交满 25-30 年，女性退休前交满 20-25 年，退休后可以免费享受。</p>
+<p>如果退休时缴费年限不够，可以一次性补缴剩余费用，然后才可以免费享受。</p>
+<p>异地医保各地的规定都不相同</p>
+<h3 id="养老保险"><a href="#养老保险" class="headerlink" title="养老保险"></a>养老保险</h3><p>公司交的钱进入基础账户，个人交的钱进入个人账户，退休后，两个账户都可以拿钱。<br>长缴多得，多缴多得</p>
+<p>最后实际拿到的养老金会在当时社会平均工资的 6 成左右</p>
+<p>至少缴满 15 年；<br>第二必须到退休年龄；<br>办理完退休证明。</p>
+<p>退休时还没有交满 15 年的必须补满 15 年才能领，</p>
+<p>如果我们只交 15 年养老金就不交的话，最后只能拿到社会平均工资的 15%，这是非常少的</p>
+<p>ref：<a href="https://zhuanlan.zhihu.com/p/109276901">https://zhuanlan.zhihu.com/p/109276901</a></p>
+<h3 id="生育保险"><a href="#生育保险" class="headerlink" title="生育保险"></a>生育保险</h3><p>生育保险的待遇有三项：产假、生育津贴、生育医疗费用报销。</p>
+<p>生育期间千万别断交，不然报不了。<br>只能先跟另一位把证领了才能报销。</p>
+<h3 id="工伤保险"><a href="#工伤保险" class="headerlink" title="工伤保险"></a>工伤保险</h3><p>医疗费、住院伙食补助费、交通费、食宿费、康复治疗费、辅助器具费，这些都报销；停工留薪、护理费、伤残待遇、工亡待遇，这些都给钱。</p>
+<p>医疗费：遭遇工伤或者职业病时治疗所必须的医疗费全部报销；<br>停工留薪：遭遇工伤或者职业病时不能工作期间的工资和福利由工伤基金按照正常上班的标准给付；<br>伤残待遇：遭遇工伤或者职业病造成不同程度的残疾，工伤基金按照不同伤残等级(1-10 级)给付伤残待遇；<br>工亡待遇：遭遇工伤或者职业病之后死亡了，工伤基金会赔给你的家人一笔钱，还有丧葬补贴等。</p>
+<p>工伤认定<br>工伤认定属于行政行为，不申请，不认定。</p>
+<p>如果企业不给我们认定，我们一定要自己或者叫近亲属或者找工会帮忙认定。</p>
+<p>并且，超过一年，不予认定。</p>
+<p>“996”加班，积劳成疾的码农等，每日空调、WiFi、零食相伴，就算累成狗累出心脏病也不算职业病。</p>
+<h3 id="失业保险"><a href="#失业保险" class="headerlink" title="失业保险"></a>失业保险</h3><p>失业是指被辞退，一定企业方解除合同，并不是我们主动辞职。</p>
+<p>一般而言，失业保险金只能拿到当地最低工资的一部分，缴纳时间越长，可领时间也越长。</p>
+<p>但只能领取 12-24 个月。具体能领多少个月，由当地省级政府规定。</p>
+<p>在上海，非本地户口也不能领取，</p>
+<p>如果失业了，只能把失业保险账户转到户籍地去按照户籍地的标准领。</p>
+<h3 id="公积金"><a href="#公积金" class="headerlink" title="公积金"></a>公积金</h3><p>公积金存贷利率都由国家统一规定，各地一样，普遍比商业贷款利率低。</p>
+<p>住房公积金能贷多久？</p>
+<p>最长不能超过 30 年，以夫妻双方年龄大的为准，男性贷款年龄加上房贷时间不能超过 65 岁，女性不能超过 60 岁。</p>
+<p>有四种计算额度的方法，取四种方法里面最低的结果作为我们可以拿到的贷款额度。</p>
+<p>第四：住房公积金该不该取出来？</p>
+<p>大家都知道，公积金可以取出来，</p>
+<p>但如果取出太多，可能账户余额的 15 倍会低于上海贷款最高限额。</p>
+<p>所以，如果王华要取出来公积金，也得保证余额的 15 倍至少高于当地最高限额 50 万。</p>
+<p>剩下的，能取就取出来吧。</p>
+<p>最高贷款限额算法;还款能力算法;可贷比例算法;账户存储额倍数算法</p>
+]]></content>
+      <categories>
+        <category>心得体会</category>
+      </categories>
+      <tags>
+        <tag>五险一金</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Giadio 多角色 chatgpt</title>
+    <url>/m/b6557c71/</url>
+    <content><![CDATA[<html>
+<head>
+  <meta charset="UTF-8">
+  <title>自适应 iframe 示例</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 90%;
+      height: 80vh;
+      margin: 0 auto;
+    }
+    @media screen and (max-width: 767px) {
+      body {
+        height: 100vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <iframe src="https://zetafil-chatbot.hf.space" frameborder="0" width="100%" height="100%"></iframe>
+  </div>
+</body>
+</html>
 
-<hr>
-<h2 id="BILIBILI-地址PC端参数"><a href="#BILIBILI-地址PC端参数" class="headerlink" title="BILIBILI 地址PC端参数"></a>BILIBILI 地址PC端参数</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">BILIBILI 地址PC端参数</span><br><span class="line">&amp;high_quality=1   (1=最高画质 0=最低画质)</span><br><span class="line">&amp;danmaku=0   (1=打开弹幕 0=关闭弹幕)</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">iframe 参数</span><br><span class="line">allowfullscreen=&quot;allowfullscreen&quot; #移动端全屏</span><br><span class="line">sandbox=&quot;allow-top-navigation allow-same-origin allow-forms allow-scripts&quot; #禁止弹出网页</span><br></pre></td></tr></table></figure>]]></content>
+
+]]></content>
+      <categories>
+        <category>模型测试</category>
+      </categories>
+      <tags>
+        <tag>chatgpt</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>快速复制为markdown文章</title>
+    <url>/m/9c9d88aa/</url>
+    <content><![CDATA[<p>前面有介绍一个特别棒的剪藏工具cubox</p>
+<p>重点是剪藏之后可以直接导出为Markdown格式</p>
+<p>体验是非常棒的</p>
+<p>如果对cubox不了解可以先看一下这篇文章</p>
+<p><a href="https://link.zhihu.com/?target=http%3A//mp.weixin.qq.com/s%3F__biz%3DMzU4MzgxNjczMA%3D%3D%26mid%3D2247484436%26idx%3D1%26sn%3D11384d2a4ecb2dcd44ec57bf9b3addf6%26chksm%3Dfda20761cad58e773b93786ff632621d0b23b08c4aad6e43b9cb8b9b2a74a7a6e867fbdf9597%26scene%3D21%23wechat_redirect">Obsidian的最强搭档</a></p>
+<h2 id="问题来源"><a href="#问题来源" class="headerlink" title="问题来源"></a>问题来源</h2><p>今天用cubox保存了CSDN网站中的文章</p>
+<p>进入cubox中右键此篇文章傻眼了</p>
+<p>如下图</p>
+<p><img src="https://pic4.zhimg.com/v2-75f8d01550acde60dcedf5dfd21970db_b.jpg" alt=""></p>
+<p><img src="https://pic4.zhimg.com/80/v2-75f8d01550acde60dcedf5dfd21970db_720w.webp" alt=""></p>
+<p>只有复制或导出为html选项</p>
+<p>保存的竟然是快照</p>
+<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>一个很强大的插件【Copy as Markdown】</p>
+<p><img src="https://pic3.zhimg.com/v2-1ef501cc65f44130039b4d498f1d7f6e_b.jpg" alt=""></p>
+<p><img src="https://pic3.zhimg.com/80/v2-1ef501cc65f44130039b4d498f1d7f6e_720w.webp" alt=""></p>
+<ul>
+<li>在edge或者chrome浏览器安装此插件之后  </li>
+</ul>
+<ul>
+<li>在网页中选中要摘录的内容  </li>
+</ul>
+<ul>
+<li>鼠标右键找到copy selection as markdown  </li>
+</ul>
+<p><img src="https://pic1.zhimg.com/v2-ffcba6a16ce3259c6ab670fbe683ed0c_b.jpg" alt=""></p>
+<p><img src="https://pic1.zhimg.com/80/v2-ffcba6a16ce3259c6ab670fbe683ed0c_720w.webp" alt=""></p>
+<ul>
+<li>然后粘贴到Obsidian中即可，很完美  </li>
+</ul>
+<p><strong>Cubox+Copy as Markdown组合解决网页剪藏真心不错</strong></p>
+<p>END</p>
+]]></content>
       <categories>
         <category>技术梳理</category>
       </categories>
       <tags>
-        <tag>B站</tag>
-        <tag>邓紫棋</tag>
-        <tag>差不多</tag>
-        <tag>哔哩哔哩</tag>
+        <tag>Markdown</tag>
       </tags>
   </entry>
   <entry>
@@ -1149,84 +1173,6 @@ var art = new Artplayer({
       </tags>
   </entry>
   <entry>
-    <title>济南长清科目三</title>
-    <url>/m/68132ee7/</url>
-    <content><![CDATA[<h3 id="济南长清科目三新考场1号线"><a href="#济南长清科目三新考场1号线" class="headerlink" title="济南长清科目三新考场1号线"></a>济南长清科目三新考场1号线</h3><iframe src="//player.bilibili.com/player.html?aid=981824143&cid=728238637&page=1&high_quality=1&danmaku=1" allowfullscreen="allowfullscreen" width="100%" height="400" scrolling="no" frameborder="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
-
-<hr>
-<h3 id="济南长清科目三新考场2号线"><a href="#济南长清科目三新考场2号线" class="headerlink" title="济南长清科目三新考场2号线"></a>济南长清科目三新考场2号线</h3><iframe src="//player.bilibili.com/player.html?aid=341712260&cid=722429567&page=1&high_quality=1&danmaku=1" allowfullscreen="allowfullscreen" width="100%" height="400" scrolling="no" frameborder="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
-
-]]></content>
-      <categories>
-        <category>诸类考试</category>
-      </categories>
-      <tags>
-        <tag>驾考</tag>
-        <tag>科目三</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>快速复制为markdown文章</title>
-    <url>/m/9c9d88aa/</url>
-    <content><![CDATA[<p>前面有介绍一个特别棒的剪藏工具cubox</p>
-<p>重点是剪藏之后可以直接导出为Markdown格式</p>
-<p>体验是非常棒的</p>
-<p>如果对cubox不了解可以先看一下这篇文章</p>
-<p><a href="https://link.zhihu.com/?target=http%3A//mp.weixin.qq.com/s%3F__biz%3DMzU4MzgxNjczMA%3D%3D%26mid%3D2247484436%26idx%3D1%26sn%3D11384d2a4ecb2dcd44ec57bf9b3addf6%26chksm%3Dfda20761cad58e773b93786ff632621d0b23b08c4aad6e43b9cb8b9b2a74a7a6e867fbdf9597%26scene%3D21%23wechat_redirect">Obsidian的最强搭档</a></p>
-<h2 id="问题来源"><a href="#问题来源" class="headerlink" title="问题来源"></a>问题来源</h2><p>今天用cubox保存了CSDN网站中的文章</p>
-<p>进入cubox中右键此篇文章傻眼了</p>
-<p>如下图</p>
-<p><img src="https://pic4.zhimg.com/v2-75f8d01550acde60dcedf5dfd21970db_b.jpg" alt=""></p>
-<p><img src="https://pic4.zhimg.com/80/v2-75f8d01550acde60dcedf5dfd21970db_720w.webp" alt=""></p>
-<p>只有复制或导出为html选项</p>
-<p>保存的竟然是快照</p>
-<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>一个很强大的插件【Copy as Markdown】</p>
-<p><img src="https://pic3.zhimg.com/v2-1ef501cc65f44130039b4d498f1d7f6e_b.jpg" alt=""></p>
-<p><img src="https://pic3.zhimg.com/80/v2-1ef501cc65f44130039b4d498f1d7f6e_720w.webp" alt=""></p>
-<ul>
-<li>在edge或者chrome浏览器安装此插件之后  </li>
-</ul>
-<ul>
-<li>在网页中选中要摘录的内容  </li>
-</ul>
-<ul>
-<li>鼠标右键找到copy selection as markdown  </li>
-</ul>
-<p><img src="https://pic1.zhimg.com/v2-ffcba6a16ce3259c6ab670fbe683ed0c_b.jpg" alt=""></p>
-<p><img src="https://pic1.zhimg.com/80/v2-ffcba6a16ce3259c6ab670fbe683ed0c_720w.webp" alt=""></p>
-<ul>
-<li>然后粘贴到Obsidian中即可，很完美  </li>
-</ul>
-<p><strong>Cubox+Copy as Markdown组合解决网页剪藏真心不错</strong></p>
-<p>END</p>
-]]></content>
-      <categories>
-        <category>技术梳理</category>
-      </categories>
-      <tags>
-        <tag>Markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>陳一發兒 - 童話鎮</title>
-    <url>/m/e22056dd/</url>
-    <content><![CDATA[<h2 id="陳一發兒-童話鎮"><a href="#陳一發兒-童話鎮" class="headerlink" title="陳一發兒 - 童話鎮"></a>陳一發兒 - 童話鎮</h2><iframe src="//player.bilibili.com/player.html?aid=498778689&cid=BV17K411H73j&page=1&high_quality=1&danmaku=1" allowfullscreen="allowfullscreen" width="100%" height="400" scrolling="no" frameborder="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
-
-<blockquote>
-<p>童話鎮<br>專輯：童話鎮   歌手：陳一發兒<br>作曲：暗槓  作詞：竹君  編曲：暗槓</p>
-</blockquote>
-<p>聽說白雪公主在逃跑<br>小紅帽在擔心大灰狼<br>聽說瘋帽喜歡愛麗絲<br>醜小鴨會變成白天鵝<br>聽說彼得潘總長不大<br>傑克他有豎琴和魔法<br>聽說森林裡有糖果屋<br>灰姑娘丟了心愛的玻璃鞋<br>只有睿智的河水知道<br>白雪是因為貪玩跑出了城堡<br>小紅帽有件抑制自己<br>變成狼的大紅袍<br>總有一條蜿蜒在童話鎮裡七彩的河<br>沾染魔法的乖張氣息<br>卻又在愛里曲折<br>川流不息揚起水花<br>又捲入一簾時光入水<br>讓所有很久很久以前<br>都走到幸福結局的時刻<br>聽說睡美人被埋藏<br>小人魚在眺望金殿堂<br>聽說阿波羅變成金烏<br>草原有奔跑的劍齒虎<br>聽說匹諾曹總說著謊<br>侏儒怪擁有寶石滿箱<br>聽說懸崖有顆長生樹<br>紅鞋子不知疲倦地在跳舞<br>只有睿智的河水知道<br>睡美人逃避了生活的煎熬<br>小人魚把陽光抹成眼影<br>投進泡沫的懷抱<br>總有一條蜿蜒在童話鎮裡七彩的河<br>沾染魔法的乖張氣息<br>卻又在愛里曲折<br>川流不息揚起水花<br>又捲入一簾時光入水<br>讓所有很久很久以前<br>都走到幸福結局的時刻<br>總有一條蜿蜒在童話鎮裡夢幻的河<br>分隔了理想分隔現實<br>又在前方的山口匯合<br>川流不息揚起水花 又捲入一簾時光入水<br>讓所有很久很久以前<br>都走到幸福結局的時刻 又陌生<br>啊<del>啊</del>啊<del>啊</del></p>
-]]></content>
-      <categories>
-        <category>心得体会</category>
-      </categories>
-      <tags>
-        <tag>哔哩哔哩</tag>
-        <tag>陈一发儿</tag>
-        <tag>童话镇</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>更新日志</title>
     <url>/m/5a717bf0/</url>
     <content><![CDATA[<h1 id="插件列表"><a href="#插件列表" class="headerlink" title="插件列表"></a>插件列表</h1><h2 id="【已设置】"><a href="#【已设置】" class="headerlink" title="【已设置】"></a>【已设置】</h2><details class="folding-tag" 参数（可选）><summary> 【已设置】 </summary>
@@ -1250,6 +1196,83 @@ var art = new Artplayer({
       </categories>
       <tags>
         <tag>日志</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何引用B站视频</title>
+    <url>/m/39deb4c6/</url>
+    <content><![CDATA[<h2 id="【差不多】邓紫棋-视频播放源"><a href="#【差不多】邓紫棋-视频播放源" class="headerlink" title="【差不多】邓紫棋-视频播放源"></a>【差不多】邓紫棋-视频播放源</h2><iframe src="//player.bilibili.com/player.html?aid=60016166&cid=104514776&page=1&high_quality=1&danmaku=1" allowfullscreen="allowfullscreen" width="100%" height="400" scrolling="no" frameborder="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
+
+<hr>
+<h2 id="BILIBILI-地址PC端参数"><a href="#BILIBILI-地址PC端参数" class="headerlink" title="BILIBILI 地址PC端参数"></a>BILIBILI 地址PC端参数</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">BILIBILI 地址PC端参数</span><br><span class="line">&amp;high_quality=1   (1=最高画质 0=最低画质)</span><br><span class="line">&amp;danmaku=0   (1=打开弹幕 0=关闭弹幕)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">iframe 参数</span><br><span class="line">allowfullscreen=&quot;allowfullscreen&quot; #移动端全屏</span><br><span class="line">sandbox=&quot;allow-top-navigation allow-same-origin allow-forms allow-scripts&quot; #禁止弹出网页</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>技术梳理</category>
+      </categories>
+      <tags>
+        <tag>B站</tag>
+        <tag>邓紫棋</tag>
+        <tag>差不多</tag>
+        <tag>哔哩哔哩</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>测试</title>
+    <url>/m/9daba997/</url>
+    <content><![CDATA[<p>万一呢</p>
+]]></content>
+      <categories>
+        <category>测试分类</category>
+      </categories>
+      <tags>
+        <tag>测试标签</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>陳一發兒 - 童話鎮</title>
+    <url>/m/e22056dd/</url>
+    <content><![CDATA[<h2 id="陳一發兒-童話鎮"><a href="#陳一發兒-童話鎮" class="headerlink" title="陳一發兒 - 童話鎮"></a>陳一發兒 - 童話鎮</h2><iframe src="//player.bilibili.com/player.html?aid=498778689&cid=BV17K411H73j&page=1&high_quality=1&danmaku=1" allowfullscreen="allowfullscreen" width="100%" height="400" scrolling="no" frameborder="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
+
+<blockquote>
+<p>童話鎮<br>專輯：童話鎮   歌手：陳一發兒<br>作曲：暗槓  作詞：竹君  編曲：暗槓</p>
+</blockquote>
+<p>聽說白雪公主在逃跑<br>小紅帽在擔心大灰狼<br>聽說瘋帽喜歡愛麗絲<br>醜小鴨會變成白天鵝<br>聽說彼得潘總長不大<br>傑克他有豎琴和魔法<br>聽說森林裡有糖果屋<br>灰姑娘丟了心愛的玻璃鞋<br>只有睿智的河水知道<br>白雪是因為貪玩跑出了城堡<br>小紅帽有件抑制自己<br>變成狼的大紅袍<br>總有一條蜿蜒在童話鎮裡七彩的河<br>沾染魔法的乖張氣息<br>卻又在愛里曲折<br>川流不息揚起水花<br>又捲入一簾時光入水<br>讓所有很久很久以前<br>都走到幸福結局的時刻<br>聽說睡美人被埋藏<br>小人魚在眺望金殿堂<br>聽說阿波羅變成金烏<br>草原有奔跑的劍齒虎<br>聽說匹諾曹總說著謊<br>侏儒怪擁有寶石滿箱<br>聽說懸崖有顆長生樹<br>紅鞋子不知疲倦地在跳舞<br>只有睿智的河水知道<br>睡美人逃避了生活的煎熬<br>小人魚把陽光抹成眼影<br>投進泡沫的懷抱<br>總有一條蜿蜒在童話鎮裡七彩的河<br>沾染魔法的乖張氣息<br>卻又在愛里曲折<br>川流不息揚起水花<br>又捲入一簾時光入水<br>讓所有很久很久以前<br>都走到幸福結局的時刻<br>總有一條蜿蜒在童話鎮裡夢幻的河<br>分隔了理想分隔現實<br>又在前方的山口匯合<br>川流不息揚起水花 又捲入一簾時光入水<br>讓所有很久很久以前<br>都走到幸福結局的時刻 又陌生<br>啊<del>啊</del>啊<del>啊</del></p>
+]]></content>
+      <categories>
+        <category>心得体会</category>
+      </categories>
+      <tags>
+        <tag>哔哩哔哩</tag>
+        <tag>陈一发儿</tag>
+        <tag>童话镇</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>济南长清科目三</title>
+    <url>/m/68132ee7/</url>
+    <content><![CDATA[<h3 id="济南长清科目三新考场1号线"><a href="#济南长清科目三新考场1号线" class="headerlink" title="济南长清科目三新考场1号线"></a>济南长清科目三新考场1号线</h3><iframe src="//player.bilibili.com/player.html?aid=981824143&cid=728238637&page=1&high_quality=1&danmaku=1" allowfullscreen="allowfullscreen" width="100%" height="400" scrolling="no" frameborder="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
+
+<hr>
+<h3 id="济南长清科目三新考场2号线"><a href="#济南长清科目三新考场2号线" class="headerlink" title="济南长清科目三新考场2号线"></a>济南长清科目三新考场2号线</h3><iframe src="//player.bilibili.com/player.html?aid=341712260&cid=722429567&page=1&high_quality=1&danmaku=1" allowfullscreen="allowfullscreen" width="100%" height="400" scrolling="no" frameborder="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>
+
+]]></content>
+      <categories>
+        <category>诸类考试</category>
+      </categories>
+      <tags>
+        <tag>驾考</tag>
+        <tag>科目三</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>笔记</title>
+    <url>/m/61622d0e/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>分类</category>
+      </categories>
+      <tags>
+        <tag>标签</tag>
       </tags>
   </entry>
 </search>

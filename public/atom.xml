@@ -6,7 +6,7 @@
   <link href="https://mpsxx.top/atom.xml" rel="self"/>
   
   <link href="https://mpsxx.top/"/>
-  <updated>2023-04-22T15:05:53.591Z</updated>
+  <updated>2023-05-05T14:51:49.387Z</updated>
   <id>https://mpsxx.top/</id>
   
   <author>
@@ -15,6 +15,46 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>笔记</title>
+    <link href="https://mpsxx.top/m/61622d0e/"/>
+    <id>https://mpsxx.top/m/61622d0e/</id>
+    <published>2023-05-05T14:51:49.000Z</published>
+    <updated>2023-05-05T14:51:49.387Z</updated>
+    
+    
+    <summary type="html">介绍</summary>
+    
+    
+    
+    <category term="分类" scheme="https://mpsxx.top/categories/%E5%88%86%E7%B1%BB/"/>
+    
+    
+    <category term="标签" scheme="https://mpsxx.top/tags/%E6%A0%87%E7%AD%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>测试</title>
+    <link href="https://mpsxx.top/m/9daba997/"/>
+    <id>https://mpsxx.top/m/9daba997/</id>
+    <published>2023-05-05T12:56:29.000Z</published>
+    <updated>2023-05-05T12:57:22.958Z</updated>
+    
+    <content type="html"><![CDATA[<p>万一呢</p>]]></content>
+    
+    
+    <summary type="html">测试描述</summary>
+    
+    
+    
+    <category term="测试分类" scheme="https://mpsxx.top/categories/%E6%B5%8B%E8%AF%95%E5%88%86%E7%B1%BB/"/>
+    
+    
+    <category term="测试标签" scheme="https://mpsxx.top/tags/%E6%B5%8B%E8%AF%95%E6%A0%87%E7%AD%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>chatbot_code_friendly</title>
@@ -313,9 +353,9 @@
     <category term="心得体会" scheme="https://mpsxx.top/categories/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/"/>
     
     
-    <category term="2020" scheme="https://mpsxx.top/tags/2020/"/>
-    
     <category term="总结" scheme="https://mpsxx.top/tags/%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="2020" scheme="https://mpsxx.top/tags/2020/"/>
     
   </entry>
   
@@ -336,9 +376,9 @@
     <category term="心得体会" scheme="https://mpsxx.top/categories/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/"/>
     
     
-    <category term="总结" scheme="https://mpsxx.top/tags/%E6%80%BB%E7%BB%93/"/>
-    
     <category term="2019" scheme="https://mpsxx.top/tags/2019/"/>
+    
+    <category term="总结" scheme="https://mpsxx.top/tags/%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
