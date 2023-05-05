@@ -68,7 +68,7 @@ jobs:
 
       - name: 部署博客
         run: 
-          hexo cl && hexo g && hexo d
+          hexo cl && hexo g
           
       - name: 跳转到./public
         run:           
