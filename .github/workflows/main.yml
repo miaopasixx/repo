@@ -16,11 +16,11 @@ jobs:
       - name: 开始运行
         uses: actions/checkout@v1
 
-      - name: 设置 Node.js ${{ matrix.node-version }}
+      - name: 设置 Node.js 16.x 版本
         uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node-version }}
-          
+          node-version: '16.x'
+   
       - name: 配置 Git 环境
         env:
           ACTION_DEPLOY_KEY: ${{ secrets.ACTION_DEPLOY_KEY }}
