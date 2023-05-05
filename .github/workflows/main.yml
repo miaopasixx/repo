@@ -87,5 +87,7 @@ jobs:
           git commit -m "Update"
           
       - name: 推送
-        run:      
+        run:
+          git config --global user.name "miaopasixx"
+          git config --global user.email "a13026588708@163.com"
           git push --force --quiet "https://github.com/miaopasixx/blog.git" master:master
