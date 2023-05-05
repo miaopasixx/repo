@@ -88,6 +88,6 @@ jobs:
           
       - name: 推送
         run:
-          git config --global user.name "miaopasixx"
-          git config --global user.email "a13026588708@163.com"
+          git config user.name "${{secrets.GIT_NAME}}"
+          git config user.email "${{secrets.GIT_EMAIL}}"
           git push --force --quiet "https://github.com/miaopasixx/blog.git" master:master
