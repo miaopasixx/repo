@@ -36,7 +36,7 @@ jobs:
       - name: 部署博客
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          GIT_USERNAME: ${{ secrets.GIT_NAME }} # 修改为您的用户名或昵称
+          GIT_NAME: ${{ secrets.GIT_NAME }} # 修改为您的用户名或昵称
           GIT_EMAIL: ${{ secrets.GIT_EMAIL }} # 修改为您的邮箱地址
           DEPLOY_BRANCH: gh-pages # 修改为您使用的分支名称
         run: |
