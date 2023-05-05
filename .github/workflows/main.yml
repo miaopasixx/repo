@@ -3,7 +3,7 @@ name: 自动部署 Hexo
 on:
   push:
     branches:
-      - main # 修改为你使用的分支名称
+      - master
 
 jobs:
   build:
@@ -29,8 +29,8 @@ jobs:
           echo "$ACTION_DEPLOY_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan github.com >> ~/.ssh/known_hosts
-          git config --global user.name "eallion"
-          git config --global user.email "eallion@eallion.com"
+          git config --global user.name "miaopasixx"
+          git config --global user.email "a13026588708@163.com"
 
       - name: 安装 Hexo CLI
         run: 
@@ -45,13 +45,13 @@ jobs:
           npm audit fix --only=prod # 可选，修复依赖安全漏洞
 
       - name: 部署博客
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.GH_TOKEN }}
-          GIT_NAME: ${{ secrets.GIT_NAME }} # 修改为您的用户名或昵称
-          GIT_EMAIL: ${{ secrets.GIT_EMAIL }} # 修改为您的邮箱地址
-          DEPLOY_BRANCH: gh-pages # 修改为您使用的分支名称
         run: 
-          rm -rf .deploy_git
-          hexo g -d
-          rm ~/.ssh/id_rsa
-
+          hexo cl && hexo g
+          cd ./public
+          git init
+          git config user.name "${{secrets.GIT_NAME}}"
+          git config user.email "${{secrets.GIT_EMAIL}}"
+          git add .
+          git commit -m "Update"
+          git push --force --quiet "https://${{secrets.GH_TOKEN}}@${{secrets.GH_REF}}" master:master
+          git push --force --quiet "https://${{secrets.CD_TOKEN}}@${{secrets.CD_REF}}" master:master
