@@ -13,22 +13,33 @@ jobs:
         node-version: [16.x]
 
     steps:
-      - name: Checkout 仓库
-        uses: actions/checkout@v2
+      - name: 开始运行
+        uses: actions/checkout@v1
 
-      - name: 配置 Node.js 环境
-        uses: actions/setup-node@v2-beta
+      - name: 设置 Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+          
+      - name: 配置 Git 环境
+        env:
+          ACTION_DEPLOY_KEY: ${{ secrets.ACTION_DEPLOY_KEY }}
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$ACTION_DEPLOY_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          git config --global user.name "eallion"
+          git config --global user.email "eallion@eallion.com"
 
       - name: 安装 Hexo CLI
-        run: |
+        run: 
           npm install hexo-cli -g
           npm install
           npm audit fix # 可选，修复依赖安全漏洞
 
       - name: 安装 Hexo 插件
-        run: |
+        run: 
           npm install hexo-deployer-git hexo-generator-archive hexo-generator-category hexo-generator-feed hexo-generator-index hexo-generator-search hexo-generator-tag \
             hexo-renderer-ejs hexo-renderer-marked hexo-renderer-stylus hexo-server hexo-wordcount --save
           npm audit fix --only=prod # 可选，修复依赖安全漏洞
@@ -39,17 +50,9 @@ jobs:
           GIT_NAME: ${{ secrets.GIT_NAME }} # 修改为您的用户名或昵称
           GIT_EMAIL: ${{ secrets.GIT_EMAIL }} # 修改为您的邮箱地址
           DEPLOY_BRANCH: gh-pages # 修改为您使用的分支名称
-        run: |
-          hexo clean
-          hexo generate
-          cd ./public && \
-            git init && \
-            git config user.name "miaopasixx" && \
-            git config user.email "a13026588708@163.com" && \
-            git add . && \
-            git config --global init.defaultBranch mian
-            git commit -m "Deploy by GitHub Actions" && \
-            git push -f "git@github.com:miaopasixx/ceshi.git" master:master
+        run: 
+          hexo clean && hexo g 
+          rm -rf .deploy_git
+          hexo g && hexo douban && hexo deploy
+          rm ~/.ssh/id_rsa
 
-      - name: 清理 Node.js 缓存
-        run: npm cache clean --force
