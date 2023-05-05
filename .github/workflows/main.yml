@@ -31,7 +31,6 @@ jobs:
           ssh-keyscan github.com >> ~/.ssh/known_hosts
           git config --global user.name "miaopasixx"
           git config --global user.email "a13026588708@163.com"
-
       - name: 安装 Hexo CLI
         run: 
           npm install hexo-cli -g
@@ -76,4 +75,3 @@ jobs:
           git add .
           git commit -m "Update"
           git push --force --quiet "https://${{secrets.GH_TOKEN}}@${{secrets.GH_REF}}" master:master
-          git push --force --quiet "https://github.com/miaopasixx/ceshi.git" master:master
