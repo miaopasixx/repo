@@ -1,41 +1,42 @@
-name: 自动部署 Hexo
-
+name: 自动部署
+# 当有改动推送到master分支时，启动Action
 on:
   push:
     branches:
       - master
+      #2020年10月后github新建仓库默认分支改为main，注意更改
+  release:
+    types:
+      - published
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16.x]
-
     steps:
-      - name: 开始运行
-        uses: actions/checkout@v1
-
-      - name: 设置 Node.js 16.x 版本
-        uses: actions/setup-node@v2
+      - name: 检查分支
+        uses: actions/checkout@v2
         with:
-          node-version: '16.x'
-   
-      - name: 配置 Git 环境
-        env:
-          ACTION_DEPLOY_KEY: ${{ secrets.ACTION_DEPLOY_KEY }}
+          ref: master
+          fetch-depth: 0
+      - name: Sync local file timestamps
         run: |
-          mkdir -p ~/.ssh/
-          echo "$ACTION_DEPLOY_KEY" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
-          git config --global user.name "miaopasixx"
-          git config --global user.email "a13026588708@163.com"
-      - name: 安装 Hexo CLI
-        run: 
+          git ls-files -z | while read -d '' path; do touch -d $(git log -1 --format="@%ct" "$path") "$path"; done
+
+      - name: 安装 Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "16.x"
+
+      - name: 安装 Hexo
+        run: |
+          export TZ='Asia/Shanghai'
           npm install hexo-cli -g
-          npm install
-          npm audit fix # 可选，修复依赖安全漏洞
+
+      - name: 安装依赖
+        if: ${{ steps.cache-npm.outputs.cache-hit != 'true' }}
+        run: |
+          npm install gulp-cli -g #全局安装gulp
+          npm install --save
 
       - name: 安装 Hexo 插件
         run: 
@@ -65,13 +66,23 @@ jobs:
           npm install --save pjax@0.2.8
           npm install -g yarn@1.22.19
 
-      - name: 部署博客
-        run: 
-          hexo cl && hexo g
+      - name: 生成静态文件
+        run: |
+          hexo clean
+          hexo generate
+          gulp
+
+
+      - name: 推送百度必应url
+        run: |
+          hexo deploy
+
+      - name: 部署到Github
+        run: |
           cd ./public
           git init
-          git config user.name "${{secrets.GIT_NAME}}"
-          git config user.email "${{secrets.GIT_EMAIL}}"
+          git config --global user.name "miaopasixx"
+          git config --global user.email "a13026588708@163.com"
           git add .
-          git commit -m "Update"
-          git push --force --quiet "https://${{secrets.GH_TOKEN}}@${{secrets.GH_REF}}" master:master
+          git commit -m '${{ github.event.head_commit.message }}'
+          git push --force --all https://${{secrets.GH_TOKEN}}@github.com/miaopasixx/blog.git
