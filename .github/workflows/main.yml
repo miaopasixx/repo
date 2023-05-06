@@ -70,10 +70,8 @@ jobs:
         run: |
           hexo clean
           hexo generate
-          gulp
-
-
-      - name: 推送百度必应url
+      
+      - name: 推送url
         run: |
           hexo deploy
 
